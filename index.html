@@ -1,37 +1,43 @@
 <!doctype html>
 <html lang="fr">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Révisions de bases de données relationnelles</title>
-<style>
-  :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
-  body { margin: 0; background: light-dark(#f4f7f5, #18221f); color: light-dark(#153329, #edf7f0); }
-  main { max-width: 39rem; margin: auto; padding: clamp(2rem, 10vw, 6rem) 1.25rem; }
-  h1 { margin: 0 0 .6rem; font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.1; }
-  h2 { margin: 0 0 .4rem; font-size: 1.2rem; }
-  p { margin: 0; line-height: 1.55; }
-  section { margin-top: 1.4rem; padding: 1.25rem; border: 1px solid light-dark(#bfd0c6, #496459); border-radius: .75rem; background: light-dark(#fff, #202f29); }
-  a { display: inline-block; margin: .8rem 1.2rem 0 0; color: light-dark(#12634f, #9ee5c7); font-weight: 650; text-underline-offset: .2em; }
-</style>
+<title>Réviser les bases de données relationnelles</title>
+<link rel="stylesheet" href="revision.css">
+</head>
+<body>
 <main>
   <h1>Bases de données relationnelles</h1>
-  <p>Révisions du contrôle EIG-2206.</p>
-  <section>
-    <h2>QCM interactif</h2>
-    <p>26 questions du contrôle du 17 janvier 2025, avec des explications après chaque réponse.</p>
-    <a href="qcm-bdd-2024-2025.html">Ouvrir le QCM</a>
+  <p class="lede">Choisis un sujet et entraîne-toi à ton rythme. Chaque réponse déclenche une explication.</p>
+  <section class="collection" aria-labelledby="sessions">
+    <h2 id="sessions">Choisir une session</h2>
+    <div class="grid">
+      <a class="card session-card" href="entrainement.html?session=mai">
+        <h3>Mai 2026</h3>
+        <p class="detail">IGI-3014 · 33 questions</p>
+        <strong>Commencer le QCM <span aria-hidden="true">→</span></strong>
+      </a>
+      <a class="card session-card" href="entrainement.html?session=aout">
+        <h3>Août 2026 · Rattrapage</h3>
+        <p class="detail">IGI-3014 · 32 questions</p>
+        <strong>Commencer le QCM <span aria-hidden="true">→</span></strong>
+      </a>
+      <a class="card session-card" href="qcm-bdd-2024-2025.html">
+        <h3>Janvier 2025</h3>
+        <p class="detail">EIG-2206 · 26 questions</p>
+        <strong>Commencer le QCM <span aria-hidden="true">→</span></strong>
+      </a>
+    </div>
   </section>
-  <section>
-    <h2>Cours express</h2>
-    <p>Cinq pages de révision à partir des annales de 2021–2022 à 2024–2025.</p>
-    <a href="cours-express-bdd.pdf">Lire le PDF</a>
-    <a href="cours-express-bdd.pdf" download>Télécharger le PDF</a>
-  </section>
-  <section>
-    <h2>Annales 2026 · IGI-3014</h2>
-    <p><a href="sujet-mai-2026.pdf">Mai 2026 · Sujet PDF</a></p>
-    <p><a href="sujet-aout-2026-rattrapage.pdf">Août 2026 · Sujet de rattrapage PDF</a></p>
-    <p><a href="corrige-aout-2026-rattrapage.pdf">Août 2026 · Corrigé du rattrapage PDF</a></p>
+  <section class="collection card" aria-labelledby="course">
+    <h2 id="course">Cours express</h2>
+    <p class="lede">Cinq pages sur les clés, la modélisation, l’algèbre relationnelle et SQL.</p>
+    <div class="pdf-links">
+      <a href="cours-express-bdd.pdf">Lire le PDF</a>
+      <a href="cours-express-bdd.pdf" download>Télécharger le PDF</a>
+    </div>
   </section>
 </main>
+</body>
 </html>

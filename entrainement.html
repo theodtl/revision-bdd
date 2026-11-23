@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QCM interactif · Révision BDD</title>
+<link rel="stylesheet" href="revision.css">
+<script defer src="sessions-2026.js"></script>
+<script defer src="entrainement.js"></script>
+</head>
+<body>
+<header><nav class="header-inner" aria-label="Navigation principale">
+  <a href="./">← Toutes les sessions</a>
+  <a href="cours-express-bdd.pdf">Cours express (PDF)</a>
+</nav></header>
+<main>
+  <h1 id="session-title">QCM interactif</h1>
+  <p id="intro" class="lede">Coche tes réponses pour voir l’explication. Ta progression est conservée dans ce navigateur.</p>
+  <div class="toolbar">
+    <label for="jump">Aller à la question</label>
+    <select id="jump"></select>
+  </div>
+  <p id="progress-label" class="detail" aria-live="polite"></p>
+  <progress id="progress" aria-labelledby="progress-label"></progress>
+  <article class="card" id="question" aria-labelledby="stem">
+    <p id="topic" class="detail"></p>
+    <h2 id="stem" class="question-heading" tabindex="-1"></h2>
+    <pre id="query" hidden><code></code></pre>
+    <details id="diagram" hidden>
+      <summary>Afficher le schéma</summary>
+      <figure><img id="diagram-image" alt=""><figcaption><a id="diagram-link" target="_blank" rel="noopener">Ouvrir le schéma en grand</a></figcaption></figure>
+    </details>
+    <fieldset id="choices"><legend class="detail">Une ou plusieurs réponses possibles.</legend></fieldset>
+    <div id="feedback" class="feedback" role="status" hidden>
+      <strong id="verdict"></strong><p id="explanation"></p>
+    </div>
+    <nav class="pagination" aria-label="Navigation entre les questions">
+      <button id="previous" type="button">Précédente</button>
+      <button id="next" class="primary" type="button">Suivante</button>
+    </nav>
+  </article>
+  <section id="summary" class="collection card" hidden aria-labelledby="result-title">
+    <h2 id="result-title" tabindex="-1">Bilan de la session</h2>
+    <p id="result" class="lede"></p>
+    <div class="pagination">
+      <button id="resume" class="primary" type="button">Revoir les réponses</button>
+    </div>
+  </section>
+</main>
+</body>
+</html>
